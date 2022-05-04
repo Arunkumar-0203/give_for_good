@@ -1,0 +1,470 @@
+ {% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+  <!--/ Nav End /-->
+
+  <!--/ Carousel Star /-->
+
+    <section class="section-services section-t8" style="background-image: url({% static 'img/home-slider-3.jpg'%})"  >
+    <div class="container" >
+
+        <div class="col-md-12">
+          <div class="col-sm-12 section-t8" style="padding-bottom: 10%">
+        <h1 style="color: white">BENEFACTOR REGISTRATION</h1>
+          <div class="row">
+            <div class="col-md-7">
+              <div style=" border-radius: 30px;
+  background-color:#0b2e13 ;
+  padding: 20px;">
+   <form method="post" action=""  enctype="multipart/form-data">
+       {% csrf_token %}
+      <label for="lname">Type</label>
+    <select id="cars" name="type1">
+  <option value="long_term">long_term</option>
+  <option value="short_term">short_term</option>
+{#  <option value="fiat">Fiat</option>#}
+{#  <option value="audi">Audi</option>#}
+</select>
+   <br>
+
+    <label for="fname">Name</label>
+    <input title="Enter only characters" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"  type="text" id="fname" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" name="name" placeholder="Your name.." required>
+       <label for="fname">Email</label>
+   <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter valid email" id="lname" name="email" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your email..">
+    <label for="lname">House</label>
+    <input type="text" id="lname" name="home_name" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your house name..">
+ <label for="lname">City</label>
+    <input type="text" id="lname" name="city_name" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your City..">
+ <label for="lname">Street</label>
+    <input type="text" id="lname" name="street_name" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your Street..">
+
+{#        <label for="fname">Image</label>#}
+{#   <input type="file" id="lname" name="image" style="width: 100%;#}
+{#  padding: 12px 20px;#}
+{#  margin: 8px 0;#}
+{#  display: inline-block;#}
+{#  border: 1px solid #ccc;#}
+{#  border-radius: 4px;#}
+{#  box-sizing: border-box;" placeholder="Your image..">#}
+
+    <label for="lname">Phone</label>
+    <input type="number" pattern="[6-9]{1}[0-9]{9}" id="lname" name="phone" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your phone number..">
+
+
+
+<label  for="lname">Location</label>
+
+   <select style="width: 560px;height:40px;border-radius: 8px;" id="cars" name="location">
+       {%  for loc in locations %}
+
+  <option value="{{ loc.location }}">{{ loc.location }}</option>
+
+    {% endfor %}
+   </select>
+   <br>
+
+{#  <label for="lname">Username</label>#}
+{#    <input type="text" id="lname" name="username" style="width: 100%;#}
+{#  padding: 12px 20px;#}
+{#  margin: 8px 0;#}
+{#  display: inline-block;#}
+{#  border: 1px solid #ccc;#}
+{#  border-radius: 4px;#}
+{#  box-sizing: border-box;" placeholder="Your username..">#}
+
+  <label for="lname">Password</label>
+    <input type="password" pattern=".{8,}" title="Eight or more characters" id="lname" name="password" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;" placeholder="Your password..">
+
+<main>
+{#			<div class="content">#}
+{#				<button class="button">#}
+{#					<div class="button__deco">#}
+{#						<div class="button__deco-filler"></div>#}
+{#					</div>#}
+{#					<span class="button__text">#}
+{#						<span class="button__text-inner">SIGN UP</span>#}
+{#					</span>#}
+{#				</button>#}
+{#			</div>#}
+{##}
+{#		</main>#}
+{#		<svg class="cursor" width="16px" height="16px" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">#}
+{#    <title>Combined Shape</title>#}
+{#    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">#}
+{#        <g id="REGISTRATION/Desktop/LP" transform="translate(-486.000000, -744.000000)" fill="#FFFFFF" fill-rule="nonzero">#}
+{#            <path d="M501,744 L500.999027,757.299 L514.299973,757.299973 L514.299973,758.299973 L500.999027,758.299 L501,771.599946 L500,771.599946 L499.999027,758.299 L486.700027,758.299973 L486.700027,757.299973 L499.999027,757.299 L500,744 L501,744 Z" id="Combined-Shape"></path>#}
+{#        </g>#}
+{#    </g>#}
+{#</svg>#}
+    <button  class="button1">Submit </button>
+
+    <button  class="button1"><a  href="/">Cancel</a> </button>
+
+{#    <input type="submit" style="width: 30%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;border-radius: 4px;cursor: pointer;" value="Submit">#}
+  </form>
+</div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+
+
+
+  </section>
+
+  <!--/ Carousel end /-->
+
+  <!--/ Services Star /-->
+   <br>
+    <br>
+    <br>
+    <section>
+        <div class="container HomePageFeatures">
+    <div class="grids-area-hny main-cont-wthree-fea row justify-content-center">
+
+                  <div class="col-lg-3 col-md-6 px-lg-2">
+        <div class="area-box color-1">
+{#          <i class="fa fa-cogs" aria-hidden="true"></i>#}
+         <button class="button"
+ ><h4><a class="nav-link" href="benefactor_reg">BENEFACTOR</a></button>
+          </h4>
+        </div>
+      </div>
+
+                  <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+        <div class="area-box color-2">
+{#          <i class="fa fa-book" aria-hidden="true"></i>#}
+         <button class="button2"><h4><a class="nav-link" href="beneficiary_reg">BENEFICIARY</a></button>
+          </h4>
+        </div>
+      </div>
+
+                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">
+        <div class="area-box color-3">
+{#          <i class="fa fa-coffee" aria-hidden="true"></i>#}
+         <button class="button3"><h4> <a class="nav-link" href="volunteer_reg">VOLUNTEER</a></button>
+          </h4>
+        </div>
+      </div>
+
+                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">
+        <div class="area-box color-4">
+{#          <i class="fa fa-hourglass-half" aria-hidden="true"></i>#}
+         <button class="button4"><h4> <a class="nav-link" href="login">LOGIN</a></button>
+          </h4>
+        </div>
+      </div>
+         </div>
+
+{#                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">#}
+{#        <div class="area-box color-4">#}
+{#          <i class="fa fa-hourglass-half" aria-hidden="true"></i>#}
+{#         <button class="button"><h4>  <a class="nav-link" href="contact.html">Contact</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+
+    </div>
+  </div>
+    </section>
+{#    --------------------------------------------#}
+
+
+{#    ------------------------------------------------#}
+  <section class="section-services section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">DONATE & HEALP</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Lifestyle</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+               he way you get meaning into your life is to devote yourself to loving others,
+               devote yourself to your community around you,
+               and devote yourself to creating something that gives you purpose and meaning
+              </p>
+            </div>
+            <div class="card-footer-c">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Loans</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                You may never know what results come of your action,
+                But if you do nothing there will be no result
+              </p>
+            </div>
+            <div class="card-footer-c">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Save</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
+                convallis a pellentesque
+                nec, egestas non nisi.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--/ Services End /-->
+
+  <!--/ Property Star /-->
+
+
+  <section class="section-property section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">GIVE FOR GOOD</h2>
+            </div>
+            <div>
+              <a href="url({% static 'img/image24.jpg'%})">
+                <span class="ion-ios-arrow-forward"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="property-carousel" class="owl-carousel owl-theme">
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image11.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="#" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image24.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="property-single.html" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image33.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="property-single.html" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/images44.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.html">204 Montal
+                      <br /> South Bela Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="row text-center justify-content-center">
+
+                        <div class="col-lg-3 col-sm-6">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="6300" data-speed="1500"><h1>{{ volunteer }}</h1></div>
+            <p class="count-text">
+             <h5>VOLUNTEER</h5></p>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="638" data-speed="1500"><h1>{{ benefactor }}</h1></div>
+            <p class="count-text">
+              <h5>BENEFACTOR</h5></p>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="7600" data-speed="1500"><h1>{{ beneficiary }}</h1></div>
+            <p class="count-text">
+              <h5>BENEFICIARY<h1>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+          <div class="counter border-right-0">
+            <div class="timer count-title count-number" data-to="36" data-speed="1500"><h1>36</h1></div>
+            <p class="count-text">
+              <h5>DONATE</h5></p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+  <!--/ Property End /-->
+
+
+{% endblock %}
+

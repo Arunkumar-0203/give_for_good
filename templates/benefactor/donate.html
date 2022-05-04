@@ -1,0 +1,476 @@
+
+ {% extends 'benefactor/benefactor_base.html'  %}
+{% load static %}
+{% block content %}
+
+
+  <!--/ Carousel Star /-->
+  <div class="intro intro-carousel">
+    <div id="carousel" class="owl-carousel owl-theme">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/home-slider-2.jpg' %})">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+
+                      <section class="contact">
+    <div class="container" style="padding-bottom: 50%">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-map box">
+{#            <div id="map" class="contact-map">#}
+{#              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834"#}
+{#                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>#}
+{#            </div>#}
+          </div>
+        </div>
+        <div class="col-sm-12 section-t8">
+          <div class="row" >
+            <div class="col-md-7">
+              <div>
+              <h1 class="title-single" style="color: white">DONATE...</h1>
+   <table class="table table-bordered table-striped table-hover">
+
+<th class="info" style="background-color: lightgreen;">Products</th>
+<th class="info" style="background-color: lightgreen;">Expire date</th>
+<th class="info" style="background-color: lightgreen;">Quantity</th>
+<th class="info" style="background-color: lightgreen;">Status</th>
+{#<th class="info" style="background-color: lightgreen;">Volunteer Location</th>#}
+{#   <th class="info" style="background-color: lightgreen;">Volunteer number</th>#}
+{#   <th class="info" style="background-color: lightgreen;">Volunteer emial</th>#}
+{#   <th class="info" style="background-color: lightgreen;">Collected Date</th>#}
+{#   <th class="info" style="background-color: lightgreen;">Status</th>#}
+{#   <th class="info" style="background-color: lightgreen;">Street</th>#}
+
+
+
+
+
+
+
+{% for dri in request  %}
+
+<tr>
+    <td>{{ dri.products}}</td>
+     <td>{{ dri.expiry_date}}</td>
+    {#    <td>{{ dri.phone}}</td>#}
+     <td>{{ dri.members}}</td>
+    <td>{{ dri.status}}</td>
+{#    <td>{{ dri.benefactor.location}}</td>#}
+{#    <td>{{ dri.benefactor.phone}}</td>#}
+{#    <td>{{ dri.benefactor.user.email}}</td>#}
+{#    <td>{{ dri.collected_date}}</td>#}
+
+{#    <form action="#" method="post">#}
+{#        {% csrf_token %}#}
+{#        <td> <input type="date" id="lname" name="date" style="width: 100%;#}
+{#  padding: 12px 20px;#}
+{#  margin: 8px 0;#}
+{#  display: inline-block;#}
+{#  border: 1px solid #ccc;#}
+{#  border-radius: 4px;#}
+{#  box-sizing: border-box;" placeholder="Enter Members Count.."></td>#}
+{#    <td><input type="text" id="lname" name="reply" style="width: 100%;#}
+{#  padding: 12px 20px;#}
+{#  margin: 8px 0;#}
+{#  display: inline-block;#}
+{#  border: 1px solid #ccc;#}
+{#  border-radius: 4px;#}
+{#  box-sizing: border-box;" placeholder="Reply..">#}
+{#<label style="color: red" class="container">Riject#}
+{#  <input value="Riject" type="radio" name="reply">#}
+{#  <span class="checkmark"></span>#}
+{#</label>#}
+{#        <input type="hidden" name="product_id" value="{{ dri.id }}"><button class="button1" type="submit">Send</button> </td>#}
+{#        </form>#}
+
+{#    <td>{{ dri.type1}}</td>#}
+
+
+{#    <form action="#" method="post">#}
+{#        {% csrf_token %}#}
+{#    <td><label class="container" style="color: red">Accept#}
+{#  <input value="Accept" type="radio" checked="checked" name="reply">#}
+{#  <span class="checkmark"></span>#}
+{#</label>#}
+{#<label class="container" style="padding-left: 25%;color: lightgreen">Riject#}
+{#  <input  value="Riject" type="radio" name="reply">#}
+{#  <span class="checkmark"></span>#}
+{#</label><button class="button1" type="submit">Send</button> </td>#}
+{#        <input type="hidden" name="benefactor_id" value="{{ dri.id }}"></form>#}
+</tr>
+
+
+    {% endfor %}
+</table>
+</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{#      <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/home-slider-3.jpg'%})">#}
+{#        <div class="overlay overlay-a"></div>#}
+{#        <div class="intro-content display-table">#}
+{#          <div class="table-cell">#}
+{#            <div class="container">#}
+{#              <div class="row">#}
+{#                <div class="col-lg-8">#}
+{#                  <div class="intro-body">#}
+{##}
+{#                    <h1 class="intro-title mb-4">#}
+{##}
+{#                      <br>Charity sees the need, not the cause</h1>#}
+{#                    <p class="intro-subtitle intro-price">#}
+{##}
+{##}
+{#                    </p>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#      <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-3.jpg)">#}
+{#        <div class="overlay overlay-a"></div>#}
+{#        <div class="intro-content display-table">#}
+{#          <div class="table-cell">#}
+{#            <div class="container">#}
+{#              <div class="row">#}
+{#                <div class="col-lg-8">#}
+{#                  <div class="intro-body">#}
+{#                    <p class="intro-title-top">Doral, Florida#}
+{#                      <br> 78345</p>#}
+{#                    <h1 class="intro-title mb-4">#}
+{#                      <span class="color-b">204 </span> Alira#}
+{#                      <br> Roan Road One</h1>#}
+{#                    <p class="intro-subtitle intro-price">#}
+{#                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>#}
+{#                    </p>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+    </div>
+  </div>
+
+  <!--/ Carousel end /-->
+
+  <!--/ Services Star /-->
+{#    <br>#}
+{#    <br>#}
+{#        <div class="container HomePageFeatures">#}
+{#    <div class="grids-area-hny main-cont-wthree-fea row justify-content-center">#}
+{##}
+{#                  <div class="col-lg-3 col-md-6 px-lg-2">#}
+{#        <div class="area-box color-1">#}
+{#          <i class="fa fa-cogs" aria-hidden="true"></i>#}
+{#         <button class="button"#}
+{# ><h4><a class="nav-link" href="benefactor_reg">BENEFACTOR</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+{##}
+{#                  <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">#}
+{#        <div class="area-box color-2">#}
+{#          <i class="fa fa-book" aria-hidden="true"></i>#}
+{#         <button class="button2"><h4><a class="nav-link" href="beneficiary_reg">BENEFICIARY</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+{##}
+{#                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">#}
+{#        <div class="area-box color-3">#}
+{#          <i class="fa fa-coffee" aria-hidden="true"></i>#}
+{#         <button class="button3"><h4> <a class="nav-link" href="volunteer_reg">VOLUNTEER</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+{##}
+{#                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">#}
+{#        <div class="area-box color-4">#}
+{#          <i class="fa fa-hourglass-half" aria-hidden="true"></i>#}
+{#         <button class="button4"><h4> <a class="nav-link" href="login">LOGIN</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+{#         </div>#}
+{##}
+{#                  <div class="col-lg-3 col-md-6 px-lg-2 mt-lg-0 mt-3">#}
+{#        <div class="area-box color-4">#}
+{#          <i class="fa fa-hourglass-half" aria-hidden="true"></i>#}
+{#         <button class="button"><h4>  <a class="nav-link" href="contact.html">Contact</a></button>#}
+{#          </h4>#}
+{#        </div>#}
+{#      </div>#}
+{##}
+{#    </div>#}
+{#  </div>#}
+
+  <section class="section-services section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">DONATE & HEALP</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Lifestyle</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+               he way you get meaning into your life is to devote yourself to loving others,
+               devote yourself to your community around you,
+               and devote yourself to creating something that gives you purpose and meaning
+              </p>
+            </div>
+            <div class="card-footer-c">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Loans</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                You may never know what results come of your action,
+                But if you do nothing there will be no result
+              </p>
+            </div>
+            <div class="card-footer-c">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+
+              <div class="card-title-c align-self-center">
+{#                <h2 class="title-c">Save</h2>#}
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
+                convallis a pellentesque
+                nec, egestas non nisi.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--/ Services End /-->
+
+  <!--/ Property Star /-->
+
+  <section class="section-property section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">GIVE FOR GOOD</h2>
+            </div>
+            <div>
+              <a href="url({% static 'img/image24.jpg'%})">
+                <span class="ion-ios-arrow-forward"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="property-carousel" class="owl-carousel owl-theme">
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image11.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="#" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image24.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="property-single.html" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/image33.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+
+                </div>
+                <div class="card-body-a">
+
+                  <a href="property-single.html" class="link-a">
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item-b">
+          <div class="card-box-a card-shadow">
+            <div class="img-box-a">
+              <img style="width: 600px;height: 400px" src="{% static 'img/images44.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+              <div class="card-overlay-a-content">
+                <div class="card-header-a">
+                  <h2 class="card-title-a">
+                    <a href="property-single.html">204 Montal
+                      <br /> South Bela Two</a>
+                  </h2>
+                </div>
+                <div class="card-body-a">
+                  <div class="price-box d-flex">
+                    <span class="price-a">rent | $ 12.000</span>
+                  </div>
+                  <a href="property-single.html" class="link-a">Click here to view
+                    <span class="ion-ios-arrow-forward"></span>
+                  </a>
+                </div>
+                <div class="card-footer-a">
+                  <ul class="card-info d-flex justify-content-around">
+                    <li>
+                      <h4 class="card-info-title">Area</h4>
+                      <span>340m
+                        <sup>2</sup>
+                      </span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Beds</h4>
+                      <span>2</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Baths</h4>
+                      <span>4</span>
+                    </li>
+                    <li>
+                      <h4 class="card-info-title">Garages</h4>
+                      <span>1</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="row text-center justify-content-center">
+
+                        <div class="col-lg-3 col-sm-6">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="6300" data-speed="1500"><h1>{{ volunteer }}</h1></div>
+            <p class="count-text">
+             <h5>VOLUNTEER</h5></p>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="638" data-speed="1500"><h1>{{ benefactor }}</h1></div>
+            <p class="count-text">
+              <h5>BENEFACTOR</h5></p>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+          <div class="counter">
+            <div class="timer count-title count-number" data-to="7600" data-speed="1500"><h1>{{ beneficiary }}</h1></div>
+            <p class="count-text">
+              <h5>BENEFICIARY<h1>
+          </div>
+        </div>
+
+                        <div class="col-lg-3 col-sm-6 mt-lg-0 mt-4">
+          <div class="counter border-right-0">
+            <div class="timer count-title count-number" data-to="36" data-speed="1500"><h1>{{ donate }}</h1></div>
+            <p class="count-text">
+              <h5>DONATE</h5></p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+
+ {% endblock %}
+
+
+
